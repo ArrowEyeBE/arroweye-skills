@@ -26,7 +26,7 @@ Updates arrive when Claude Code refreshes the marketplace, or with `/plugin mark
 
 ## Standalone skills
 
-See the `skills/` folder. Every skill has a README-like header in its `SKILL.md` that says when to use it.
+None published yet. Single-folder skills will appear in `skills/`; each one's `SKILL.md` says when to use it, and every release will carry a zip per skill.
 
 ## How to install a skill in your tool
 
