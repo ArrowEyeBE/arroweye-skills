@@ -1,0 +1,784 @@
+{
+  "version": "0.1",
+  "checked": "2026-10-15",
+  "note": "Indicative amounts (EUR excl. VAT) for a small Belgian start-up, used only as a starting point in interview module 7. Every line is shown to the owner, who confirms, changes or declines it; accepted lines are marked as defaults. Lines with \"ask\": true have no usable default and must be asked. Legal amounts are not stored here: \"amount_from\" points into belgian-rules.json.",
+  "when": {
+    "always": "every plan",
+    "premises": "company.premises is 'rented' or 'owned', or (not set and) a business type trade, production or hospitality",
+    "rented": "company.premises is 'rented' (or not set and premises apply)",
+    "staff": "staff[] is not empty",
+    "vehicle": "an investment looks like a vehicle (name), or company.vehicle is true",
+    "food": "company.food is true, or business type hospitality",
+    "in_kind": "an investment has in_kind: true",
+    "type:<t>": "business type <t> is selected",
+    "management_only": "the only business type is management (a management or holding company invoicing related companies)",
+    "director_paid": "a cost line with category 618 (director remuneration) exists"
+  },
+  "start_codes": {
+    "plan": "first month of the plan",
+    "first_staff": "month of the first hire",
+    "first_vehicle": "month of the first vehicle investment",
+    "fy1_filing": "7 months after the end of the first financial year (filing deadline of the annual accounts)",
+    "first_quarter_end": "the first month ending a calendar quarter on or after the start (quarterly social contributions)"
+  },
+  "lines": [
+    {
+      "id": "notary",
+      "when": "always",
+      "category": 61,
+      "amount": 1200,
+      "range": [
+        900,
+        1800
+      ],
+      "interval_months": 0,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Notaris en publicatie oprichtingsakte",
+        "fr": "Notaire et publication de l'acte constitutif",
+        "en": "Notary and publication of the deed"
+      },
+      "basis": "Notary fee, Belgian Official Gazette publication and registration for a simple BV deed. Ask the notary for the statement of costs."
+    },
+    {
+      "id": "kbo",
+      "when": "always",
+      "category": 61,
+      "amount": 110,
+      "range": [
+        100,
+        130
+      ],
+      "interval_months": 0,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Inschrijving KBO (ondernemingsloket)",
+        "fr": "Inscription BCE (guichet d'entreprises)",
+        "en": "Registration in the Crossroads Bank (KBO/BCE)"
+      },
+      "basis": "Registration fee at a business one-stop shop; indexed yearly, check the current tariff."
+    },
+    {
+      "id": "accountant",
+      "when": "always",
+      "category": 61,
+      "amount": 250,
+      "range": [
+        150,
+        600
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Boekhouder",
+        "fr": "Comptable",
+        "en": "Accountant"
+      },
+      "basis": "Bookkeeping, VAT returns and annual accounts of a small BV with few transactions; higher with staff, stock or many invoices. Ask for a quote."
+    },
+    {
+      "id": "accounting_software",
+      "when": "always",
+      "category": 61,
+      "amount": 30,
+      "range": [
+        15,
+        60
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Facturatie- en boekhoudsoftware",
+        "fr": "Logiciel de facturation et de comptabilité",
+        "en": "Invoicing and accounting software"
+      },
+      "basis": "Subscription; e-invoicing (Peppol) is mandatory between Belgian companies."
+    },
+    {
+      "id": "bank",
+      "when": "always",
+      "category": 65,
+      "amount": 15,
+      "range": [
+        5,
+        30
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Bankkosten",
+        "fr": "Frais bancaires",
+        "en": "Bank fees"
+      },
+      "basis": "Business account and cards."
+    },
+    {
+      "id": "liability_insurance",
+      "when": "always",
+      "category": 61,
+      "amount": 500,
+      "range": [
+        250,
+        1500
+      ],
+      "interval_months": 12,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Verzekering burgerlijke aansprakelijkheid",
+        "fr": "Assurance responsabilité civile",
+        "en": "Liability insurance"
+      },
+      "basis": "Operating liability; insurance premiums carry insurance tax, not VAT. Ask the broker.",
+      "not_when": [
+        "management_only"
+      ]
+    },
+    {
+      "id": "telecom",
+      "when": "always",
+      "category": 61,
+      "amount": 60,
+      "range": [
+        30,
+        120
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Telefoon en internet",
+        "fr": "Téléphone et internet",
+        "en": "Phone and internet"
+      },
+      "basis": "Mobile subscriptions and internet."
+    },
+    {
+      "id": "it_software",
+      "when": "always",
+      "category": 61,
+      "amount": 50,
+      "range": [
+        20,
+        200
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "IT, software en hosting",
+        "fr": "IT, logiciels et hébergement",
+        "en": "IT, software and hosting"
+      },
+      "basis": "Office software, e-mail, website hosting and domain.",
+      "not_when": [
+        "management_only"
+      ]
+    },
+    {
+      "id": "marketing",
+      "when": "always",
+      "category": 61,
+      "amount": 200,
+      "range": [
+        0,
+        1000
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Marketing en publiciteit",
+        "fr": "Marketing et publicité",
+        "en": "Marketing and advertising"
+      },
+      "basis": "Online ads, print, signage. Depends entirely on the plan: ask.",
+      "not_when": [
+        "management_only"
+      ]
+    },
+    {
+      "id": "nbb_filing",
+      "when": "always",
+      "category": 61,
+      "amount": 80,
+      "range": [
+        60,
+        150
+      ],
+      "interval_months": 12,
+      "start": "fy1_filing",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Neerlegging jaarrekening (NBB)",
+        "fr": "Dépôt des comptes annuels (BNB)",
+        "en": "Filing the annual accounts (NBB)"
+      },
+      "basis": "Filing fee of the National Bank for the micro schema; check the current tariff."
+    },
+    {
+      "id": "company_contribution",
+      "when": "always",
+      "category": 640,
+      "amount_from": "legal_items.company_contribution.amounts.small",
+      "interval_months": 12,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Vennootschapsbijdrage",
+        "fr": "Cotisation des sociétés",
+        "en": "Annual company contribution"
+      },
+      "basis": "Yearly contribution to the social insurance fund (amount in belgian-rules.json). A starting company is exempt during the first 3 years from the year of incorporation when its directors were self-employed for no more than 12 of the 40 quarters before incorporation (question 2.9): then the line starts after the exemption, or is left out when that is after the plan.",
+      "compute": "company_contribution"
+    },
+    {
+      "id": "dir_social",
+      "when": "director_paid",
+      "category": 618,
+      "compute": "self_employed",
+      "interval_months": 3,
+      "start": "first_quarter_end",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Sociale bijdragen zelfstandige bestuurder (betaald door de vennootschap)",
+        "fr": "Cotisations sociales de l'administrateur indépendant (payées par la société)",
+        "en": "Self-employed director's social contributions (paid by the company)"
+      },
+      "basis": "Only when the company pays the director's own social contributions (then they are part of the remuneration, category 618); decline when the director pays them out of the gross pay. Estimate per quarter: 20.5% of the yearly director pay, at least the minimum contribution, plus the fund's administration cost (legal_items.self_employed_contributions). A primostarter pays a lower minimum for 4 quarters; a side activity has its own minimum. The social insurance fund's calculation or a pay slip is better."
+    },
+    {
+      "id": "dir_allowance",
+      "when": "type:management",
+      "category": 61,
+      "amount": null,
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0,
+      "ask": true,
+      "name": {
+        "nl": "Onkostenvergoeding bestuurder",
+        "fr": "Indemnité de frais de l'administrateur",
+        "en": "Director's expense allowance"
+      },
+      "basis": "Flat-rate or actual reimbursement of costs the director makes for the company (home office, travel, daily allowance). Not remuneration (category 61), but only with a basis the tax administration accepts: take the amount from a pay slip or the accountant."
+    },
+    {
+      "id": "rent",
+      "when": "rented",
+      "category": 61,
+      "amount": null,
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0,
+      "ask": true,
+      "name": {
+        "nl": "Huur",
+        "fr": "Loyer",
+        "en": "Rent"
+      },
+      "basis": "From the lease or rental offer; no default. Usually without VAT, unless the landlord opted for VAT."
+    },
+    {
+      "id": "rent_deposit",
+      "when": "rented",
+      "kind": "investment",
+      "category": 28,
+      "amount": null,
+      "start": "plan",
+      "vat_rate": 0,
+      "life_years": 0,
+      "ask": true,
+      "name": {
+        "nl": "Huurwaarborg",
+        "fr": "Garantie locative",
+        "en": "Rental deposit"
+      },
+      "basis": "Commercial leases usually ask 3 months' rent (or a bank guarantee): cash tied up, not a cost."
+    },
+    {
+      "id": "energy",
+      "when": "premises",
+      "category": 61,
+      "amount": 250,
+      "range": [
+        100,
+        600
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "by_type": {
+        "production": 800,
+        "hospitality": 900
+      },
+      "name": {
+        "nl": "Energie",
+        "fr": "Énergie",
+        "en": "Energy"
+      },
+      "basis": "Electricity and gas; ovens, cold storage and kitchens use far more. Ask for the supplier's estimate."
+    },
+    {
+      "id": "water",
+      "when": "premises",
+      "category": 61,
+      "amount": 40,
+      "range": [
+        20,
+        250
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.06,
+      "by_type": {
+        "hospitality": 150,
+        "production": 100
+      },
+      "name": {
+        "nl": "Water",
+        "fr": "Eau",
+        "en": "Water"
+      },
+      "basis": "Water supply; VAT 6%."
+    },
+    {
+      "id": "fire_insurance",
+      "when": "premises",
+      "category": 61,
+      "amount": 600,
+      "range": [
+        300,
+        2000
+      ],
+      "interval_months": 12,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Brandverzekering inhoud en voorraad",
+        "fr": "Assurance incendie contenu et stock",
+        "en": "Fire insurance (contents and stock)"
+      },
+      "basis": "Tenant's fire insurance for contents and stock."
+    },
+    {
+      "id": "cleaning",
+      "when": "premises",
+      "category": 61,
+      "amount": 150,
+      "range": [
+        0,
+        600
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Schoonmaak",
+        "fr": "Nettoyage",
+        "en": "Cleaning"
+      },
+      "basis": "Products or a cleaning service."
+    },
+    {
+      "id": "waste",
+      "when": "premises",
+      "category": 61,
+      "amount": 60,
+      "range": [
+        30,
+        250
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Afvalophaling",
+        "fr": "Collecte des déchets",
+        "en": "Waste collection"
+      },
+      "basis": "Commercial waste contract; more for food and production."
+    },
+    {
+      "id": "maintenance",
+      "when": "premises",
+      "category": 61,
+      "amount": 100,
+      "range": [
+        50,
+        500
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Onderhoud en herstellingen",
+        "fr": "Entretien et réparations",
+        "en": "Maintenance and repairs"
+      },
+      "basis": "Premises and equipment."
+    },
+    {
+      "id": "accident_insurance",
+      "when": "staff",
+      "category": 61,
+      "amount": 300,
+      "range": [
+        150,
+        1000
+      ],
+      "per": "employee",
+      "interval_months": 12,
+      "start": "first_staff",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Arbeidsongevallenverzekering",
+        "fr": "Assurance accidents du travail",
+        "en": "Workplace accident insurance"
+      },
+      "basis": "Legally required once there is an employee; roughly 1% of gross pay for office work, more for manual work."
+    },
+    {
+      "id": "social_secretariat",
+      "when": "staff",
+      "category": 61,
+      "amount": 40,
+      "range": [
+        25,
+        70
+      ],
+      "per": "employee",
+      "interval_months": 1,
+      "start": "first_staff",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Sociaal secretariaat",
+        "fr": "Secrétariat social",
+        "en": "Payroll service (social secretariat)"
+      },
+      "basis": "Payroll processing per employee per month, plus a one-off affiliation fee."
+    },
+    {
+      "id": "prevention_service",
+      "when": "staff",
+      "category": 61,
+      "amount": 100,
+      "range": [
+        60,
+        200
+      ],
+      "per": "employee",
+      "interval_months": 12,
+      "start": "first_staff",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Externe preventiedienst (arbeidsgeneeskunde)",
+        "fr": "Service externe de prévention (médecine du travail)",
+        "en": "External prevention service (occupational health)"
+      },
+      "basis": "Membership is mandatory for employers; fee per employee per year."
+    },
+    {
+      "id": "vehicle_fuel",
+      "when": "vehicle",
+      "category": 61,
+      "amount": 250,
+      "range": [
+        100,
+        600
+      ],
+      "per": "vehicle",
+      "interval_months": 1,
+      "start": "first_vehicle",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Brandstof of laden voertuig",
+        "fr": "Carburant ou recharge du véhicule",
+        "en": "Vehicle fuel or charging"
+      },
+      "basis": "Depends on the kilometres per month: ask. VAT deduction on cars is limited."
+    },
+    {
+      "id": "vehicle_insurance",
+      "when": "vehicle",
+      "category": 61,
+      "amount": 1200,
+      "range": [
+        700,
+        2500
+      ],
+      "per": "vehicle",
+      "interval_months": 12,
+      "start": "first_vehicle",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Verzekering voertuig",
+        "fr": "Assurance du véhicule",
+        "en": "Vehicle insurance"
+      },
+      "basis": "Third-party liability plus omnium for a new vehicle."
+    },
+    {
+      "id": "vehicle_tax",
+      "when": "vehicle",
+      "category": 640,
+      "amount": 250,
+      "range": [
+        100,
+        600
+      ],
+      "per": "vehicle",
+      "interval_months": 12,
+      "start": "first_vehicle",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Verkeersbelasting",
+        "fr": "Taxe de circulation",
+        "en": "Road tax"
+      },
+      "basis": "Regional road tax; depends on the region and the vehicle."
+    },
+    {
+      "id": "vehicle_maintenance",
+      "when": "vehicle",
+      "category": 61,
+      "amount": 80,
+      "range": [
+        40,
+        200
+      ],
+      "per": "vehicle",
+      "interval_months": 1,
+      "start": "first_vehicle",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Onderhoud voertuig",
+        "fr": "Entretien du véhicule",
+        "en": "Vehicle maintenance"
+      },
+      "basis": "Servicing and tyres."
+    },
+    {
+      "id": "payment_terminal",
+      "when": "type:trade",
+      "also": [
+        "type:hospitality"
+      ],
+      "category": 61,
+      "amount": 30,
+      "range": [
+        15,
+        50
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Betaalterminal",
+        "fr": "Terminal de paiement",
+        "en": "Payment terminal"
+      },
+      "basis": "Terminal rental; transaction fees belong in the stream's other variable cost %."
+    },
+    {
+      "id": "pos",
+      "when": "type:trade",
+      "also": [
+        "type:hospitality"
+      ],
+      "category": 61,
+      "amount": 60,
+      "range": [
+        30,
+        120
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Kassasysteem",
+        "fr": "Système de caisse",
+        "en": "Till system (POS)"
+      },
+      "basis": "Subscription. Hospitality: a registered cash system (GKS/SCE) is required for most restaurants."
+    },
+    {
+      "id": "webshop_platform",
+      "when": "type:trade",
+      "category": 61,
+      "amount": null,
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "ask": true,
+      "name": {
+        "nl": "Webshopplatform en apps",
+        "fr": "Plateforme e-commerce et applications",
+        "en": "Webshop platform and apps"
+      },
+      "basis": "Only for online sales: platform subscription and paid apps. Ask whether there is a webshop."
+    },
+    {
+      "id": "favv",
+      "when": "food",
+      "category": 640,
+      "amount": 200,
+      "range": [
+        50,
+        500
+      ],
+      "interval_months": 12,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "FAVV-heffing en toelating",
+        "fr": "Contribution et autorisation AFSCA",
+        "en": "Food safety agency (FAVV/AFSCA) levy"
+      },
+      "basis": "Yearly levy of the federal food safety agency; the authorisation must be in place before the first sale."
+    },
+    {
+      "id": "product_liability",
+      "when": "type:production",
+      "category": 61,
+      "amount": 500,
+      "range": [
+        250,
+        1500
+      ],
+      "interval_months": 12,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Verzekering productaansprakelijkheid",
+        "fr": "Assurance responsabilité produits",
+        "en": "Product liability insurance"
+      },
+      "basis": "Often combined with the liability insurance: ask the broker."
+    },
+    {
+      "id": "machine_maintenance",
+      "when": "type:production",
+      "category": 61,
+      "amount": 150,
+      "range": [
+        50,
+        600
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Onderhoud machines",
+        "fr": "Entretien des machines",
+        "en": "Machine maintenance"
+      },
+      "basis": "Maintenance contracts and repairs."
+    },
+    {
+      "id": "music_licence",
+      "when": "type:hospitality",
+      "category": 61,
+      "amount": 400,
+      "range": [
+        150,
+        1000
+      ],
+      "interval_months": 12,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Muziekrechten (Unisono)",
+        "fr": "Droits musicaux (Unisono)",
+        "en": "Music licence (Unisono)"
+      },
+      "basis": "Only when music is played for customers."
+    },
+    {
+      "id": "linen",
+      "when": "type:hospitality",
+      "category": 61,
+      "amount": 150,
+      "range": [
+        50,
+        400
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Linnen en wasserij",
+        "fr": "Linge et blanchisserie",
+        "en": "Linen and laundry"
+      },
+      "basis": "Table linen, aprons, towels."
+    },
+    {
+      "id": "small_equipment",
+      "when": "type:hospitality",
+      "category": 61,
+      "amount": 100,
+      "range": [
+        50,
+        300
+      ],
+      "interval_months": 1,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Vervanging klein materiaal en servies",
+        "fr": "Remplacement petit matériel et vaisselle",
+        "en": "Replacement of small equipment and tableware"
+      },
+      "basis": "Breakage and small kitchen tools."
+    },
+    {
+      "id": "professional_indemnity",
+      "when": "type:services",
+      "also": [
+        "type:software"
+      ],
+      "category": 61,
+      "amount": 600,
+      "range": [
+        300,
+        2000
+      ],
+      "interval_months": 12,
+      "start": "plan",
+      "vat_rate": 0,
+      "name": {
+        "nl": "Beroepsaansprakelijkheidsverzekering",
+        "fr": "Assurance responsabilité professionnelle",
+        "en": "Professional indemnity insurance"
+      },
+      "basis": "Advice, IT and consulting work; clients often require it."
+    },
+    {
+      "id": "auditor_in_kind",
+      "when": "in_kind",
+      "category": 61,
+      "amount": 2000,
+      "range": [
+        1200,
+        4000
+      ],
+      "interval_months": 0,
+      "start": "plan",
+      "vat_rate": 0.21,
+      "name": {
+        "nl": "Bedrijfsrevisor (verslag inbreng in natura)",
+        "fr": "Réviseur d'entreprises (rapport sur l'apport en nature)",
+        "en": "Company auditor (report on the contribution in kind)"
+      },
+      "basis": "Art. 5:7 WVV report on a contribution in kind; ask for a quote. Often a reason to contribute cash instead."
+    }
+  ],
+  "not_when_note": "\"not_when\": the line is skipped when one of these conditions holds",
+  "compute_note": "\"compute\": \"self_employed\" derives the amount from the 618 lines and legal_items.self_employed_contributions; \"company_contribution\" uses company.contribution_exempt to start the line after the exemption"
+}

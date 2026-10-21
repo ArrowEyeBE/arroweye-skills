@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "language": "fr",
+    "schema_version": "0.1",
+    "note": "Fictional test case: online shop for plant pots and home decor, own webshop + marketplaces, no premises."
+  },
+  "company": {
+    "name": "Maison Verdure",
+    "legal_form": "BV",
+    "address": "Rue de l'Exemple 12, 5000 Namur",
+    "start_date": "2027-02-01",
+    "first_fy_end": "2027-12-31",
+    "fiscal_years": 3,
+    "vat_period_months": 3,
+    "business_types": [
+      "trade"
+    ],
+    "premises": "none"
+  },
+  "revenue_streams": [
+    {
+      "id": "webshop",
+      "name": "Boutique en ligne",
+      "unit": "commandes",
+      "price_excl_vat": 48,
+      "price_indexation": 0.02,
+      "vat_rate": 0.21,
+      "payment_lag_months": 0,
+      "goods_cost_pct": 0.42,
+      "other_var_cost_pct": 0.155,
+      "stock_cover_months": 2,
+      "supplier_lag_months": 0,
+      "purchase_vat_rate": 0.21,
+      "volumes": {
+        "2027-02": 120,
+        "2027-03": 140,
+        "2027-04": 160,
+        "2027-05": 180,
+        "2027-06": 200,
+        "2027-07": 220,
+        "2027-08": 240,
+        "2027-09": 260,
+        "2027-10": 308,
+        "2027-11": 450,
+        "2027-12": 600,
+        "2028-01": 256,
+        "2028-02": 272,
+        "2028-03": 304,
+        "2028-04": 320,
+        "2028-05": 320,
+        "2028-06": 288,
+        "2028-07": 256,
+        "2028-08": 256,
+        "2028-09": 320,
+        "2028-10": 352,
+        "2028-11": 480,
+        "2028-12": 640,
+        "2029-01": 296,
+        "2029-02": 314,
+        "2029-03": 352,
+        "2029-04": 370,
+        "2029-05": 370,
+        "2029-06": 333,
+        "2029-07": 296,
+        "2029-08": 296,
+        "2029-09": 370,
+        "2029-10": 407,
+        "2029-11": 555,
+        "2029-12": 740
+      }
+    },
+    {
+      "id": "marketplace",
+      "name": "Places de marché en ligne",
+      "unit": "commandes",
+      "price_excl_vat": 40,
+      "price_indexation": 0.02,
+      "vat_rate": 0.21,
+      "payment_lag_months": 1,
+      "goods_cost_pct": 0.42,
+      "other_var_cost_pct": 0.15,
+      "stock_cover_months": 2,
+      "supplier_lag_months": 0,
+      "purchase_vat_rate": 0.21,
+      "volumes": {
+        "2027-02": 0,
+        "2027-03": 0,
+        "2027-04": 0,
+        "2027-05": 0,
+        "2027-06": 0,
+        "2027-07": 0,
+        "2027-08": 0,
+        "2027-09": 60,
+        "2027-10": 66,
+        "2027-11": 90,
+        "2027-12": 120,
+        "2028-01": 88,
+        "2028-02": 94,
+        "2028-03": 104,
+        "2028-04": 110,
+        "2028-05": 110,
+        "2028-06": 99,
+        "2028-07": 88,
+        "2028-08": 88,
+        "2028-09": 110,
+        "2028-10": 121,
+        "2028-11": 165,
+        "2028-12": 220,
+        "2029-01": 112,
+        "2029-02": 119,
+        "2029-03": 133,
+        "2029-04": 140,
+        "2029-05": 140,
+        "2029-06": 126,
+        "2029-07": 112,
+        "2029-08": 112,
+        "2029-09": 140,
+        "2029-10": 154,
+        "2029-11": 210,
+        "2029-12": 280
+      }
+    }
+  ],
+  "cost_lines": [
+    {
+      "id": "director_y1",
+      "name": "Rémunération gérante",
+      "category": 618,
+      "amount": 1500,
+      "interval_months": 1,
+      "start": "2027-02",
+      "end": "2027-12",
+      "vat_rate": 0,
+      "indexation": 0
+    },
+    {
+      "id": "director",
+      "name": "Rémunération gérante à partir de l'année 2",
+      "category": 618,
+      "amount": 2600,
+      "interval_months": 1,
+      "start": "2028-01",
+      "vat_rate": 0,
+      "indexation": 0.02
+    },
+    {
+      "id": "storage",
+      "name": "Box de stockage",
+      "category": 61,
+      "amount": 180,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": "Offre du loueur"
+    },
+    {
+      "id": "ads",
+      "name": "Publicité en ligne (Google, Meta)",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "indexation": 0.02
+    },
+    {
+      "id": "photos",
+      "name": "Photos des produits",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 0,
+      "start": "2027-02",
+      "vat_rate": 0.21
+    },
+    {
+      "id": "notary",
+      "name": "Notaire et publication de l'acte constitutif",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 0,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "kbo",
+      "name": "Inscription BCE (guichet d'entreprises)",
+      "category": 61,
+      "amount": 110,
+      "interval_months": 0,
+      "start": "2027-02",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accountant",
+      "name": "Comptable",
+      "category": 61,
+      "amount": 250,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accounting_software",
+      "name": "Logiciel de facturation et de comptabilité",
+      "category": 61,
+      "amount": 30,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "bank",
+      "name": "Frais bancaires",
+      "category": 65,
+      "amount": 15,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "liability_insurance",
+      "name": "Assurance responsabilité civile",
+      "category": 61,
+      "amount": 500,
+      "interval_months": 12,
+      "start": "2027-02",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "telecom",
+      "name": "Téléphone et internet",
+      "category": 61,
+      "amount": 60,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "it_software",
+      "name": "IT, logiciels et hébergement",
+      "category": 61,
+      "amount": 50,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "nbb_filing",
+      "name": "Dépôt des comptes annuels (BNB)",
+      "category": 61,
+      "amount": 80,
+      "interval_months": 12,
+      "start": "2028-07",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accident_insurance",
+      "name": "Assurance accidents du travail",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 12,
+      "start": "2027-11",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "social_secretariat",
+      "name": "Secrétariat social",
+      "category": 61,
+      "amount": 160,
+      "interval_months": 1,
+      "start": "2027-11",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "prevention_service",
+      "name": "Service externe de prévention (médecine du travail)",
+      "category": 61,
+      "amount": 400,
+      "interval_months": 12,
+      "start": "2027-11",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "payment_terminal",
+      "name": "Terminal de paiement",
+      "category": 61,
+      "amount": 30,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "pos",
+      "name": "Système de caisse",
+      "category": 61,
+      "amount": 60,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "webshop_platform",
+      "name": "Plateforme de la boutique en ligne et applications",
+      "category": 61,
+      "amount": 90,
+      "interval_months": 1,
+      "start": "2027-02",
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": "Tarif de la plateforme"
+    },
+    {
+      "id": "company_contribution",
+      "name": "Cotisation des sociétés",
+      "category": 640,
+      "amount": 409.3,
+      "interval_months": 12,
+      "start": "2027-02",
+      "vat_rate": 0,
+      "source": "Caisse d'assurances sociales (pas d'exonération)"
+    }
+  ],
+  "staff": [
+    {
+      "id": "student27",
+      "role": "Étudiant (pic de fin d'année)",
+      "contract": "étudiant",
+      "start": "2027-11",
+      "end": "2027-12",
+      "fte": 0.3,
+      "employer_cost_monthly": 900
+    },
+    {
+      "id": "packer",
+      "role": "Préparateur de commandes (mi-temps)",
+      "contract": "employé",
+      "start": "2028-03",
+      "fte": 0.5,
+      "gross_monthly": 2500
+    },
+    {
+      "id": "student28",
+      "role": "Étudiant (pic de fin d'année)",
+      "contract": "étudiant",
+      "start": "2028-11",
+      "end": "2028-12",
+      "fte": 0.3,
+      "employer_cost_monthly": 900
+    },
+    {
+      "id": "student29",
+      "role": "Étudiant (pic de fin d'année)",
+      "contract": "étudiant",
+      "start": "2029-11",
+      "end": "2029-12",
+      "fte": 0.3,
+      "employer_cost_monthly": 900
+    }
+  ],
+  "investments": [
+    {
+      "id": "site",
+      "name": "Développement de la boutique en ligne",
+      "category": 21,
+      "amount": 9000,
+      "date": "2027-02",
+      "life_years": 3
+    },
+    {
+      "id": "racks",
+      "name": "Rayonnages et matériel d'emballage",
+      "category": 22,
+      "amount": 3500,
+      "date": "2027-02",
+      "life_years": 5
+    },
+    {
+      "id": "laptop",
+      "name": "Ordinateur et imprimante d'étiquettes",
+      "category": 22,
+      "amount": 2000,
+      "date": "2027-02",
+      "life_years": 3
+    }
+  ],
+  "financing": {
+    "equity": [
+      {
+        "name": "Apport fondatrice A",
+        "amount": 20000,
+        "date": "2027-02"
+      },
+      {
+        "name": "Apport fondateur B",
+        "amount": 10000,
+        "date": "2027-02"
+      }
+    ],
+    "loans": [
+      {
+        "lender": "Prêt d'un proche",
+        "type": "other",
+        "amount": 20000,
+        "date": "2027-02",
+        "rate": 0.03,
+        "term_months": 60,
+        "grace_months": 12,
+        "guarantees": "aucune"
+      }
+    ],
+    "grants": [],
+    "confirmed_none": [
+      "grants",
+      "in_kind"
+    ]
+  },
+  "tax": {
+    "reduced_rate": false,
+    "prepayments": false,
+    "payment_lag_months": 9
+  },
+  "defaults_used": [
+    "webshop.stock_cover_months",
+    "marketplace.stock_cover_months",
+    "notary",
+    "kbo",
+    "accountant",
+    "accounting_software",
+    "bank",
+    "liability_insurance",
+    "telecom",
+    "it_software",
+    "nbb_filing",
+    "company_contribution",
+    "accident_insurance",
+    "social_secretariat",
+    "prevention_service",
+    "payment_terminal",
+    "pos"
+  ],
+  "founders": [
+    {
+      "name": "Fondatrice A",
+      "role": "Gérante, achats et marketing",
+      "address": "Rue de l'Exemple 12, 5000 Namur",
+      "birth_year": 1991,
+      "side_activity": false
+    },
+    {
+      "name": "Fondateur B",
+      "role": "Administrateur, logistique",
+      "address": "Avenue Fictive 8, 5100 Jambes",
+      "birth_year": 1988,
+      "side_activity": true
+    }
+  ],
+  "activity": {
+    "purpose": "La société a pour objet, en Belgique et à l'étranger, le commerce de détail et de gros, en ligne et hors ligne, d'articles de décoration, de pots de fleurs, de plantes et d'accessoires pour la maison et le jardin, ainsi que toutes les opérations qui s'y rapportent directement ou indirectement.",
+    "offer": "Maison Verdure vend en ligne des pots de fleurs, des cache-pots et des objets de décoration pour la maison, sélectionnés auprès de petits fabricants européens.\n\n- Boutique en ligne propre, avec livraison en Belgique, aux Pays-Bas et en France.\n- À partir de septembre 2027, une sélection des produits est aussi proposée sur les places de marché en ligne.",
+    "business_model": "Les clients paient en ligne au moment de la commande. Le panier moyen est de {{stream.webshop.price}} hors TVA sur la boutique propre et de {{stream.marketplace.price}} sur les places de marché.\n\nLe coût d'achat des produits représente 42 % du prix de vente hors TVA. Les frais de paiement et d'expédition représentent ensemble 15,5 % du chiffre d'affaires de la boutique ; sur les places de marché, la commission est de 15 %, et le produit des ventes est versé avec environ un mois de décalage.\n\nLes produits sont achetés par lots auprès des fabricants et payés à la commande. La société garde un stock correspondant à environ 2 mois de ventes.",
+    "market": "La clientèle est composée de particuliers, principalement des femmes de 25 à 55 ans, qui achètent en ligne pour leur intérieur. Les ventes sont fortement saisonnières, avec un pic en novembre et en décembre.",
+    "outlook": "À terme, la société souhaite développer une gamme propre de pots, fabriquée en Belgique, et vendre à des fleuristes et des magasins de décoration."
+  },
+  "assumptions": {
+    "years": [
+      "Le premier exercice compte 11 mois. La boutique en ligne démarre en février 2027 avec environ 120 commandes par mois, pour atteindre 300 commandes en octobre. Les ventes sur les places de marché commencent en septembre. Le chiffre d'affaires s'élève à {{revenue.1}}. Un étudiant renforce l'équipe en novembre et en décembre.",
+      "Au deuxième exercice, la boutique traite en moyenne environ 320 commandes par mois, avec un pic en décembre, et les places de marché environ 110. Un préparateur de commandes à mi-temps est engagé en mars 2028 et la rémunération de la gérante augmente. Le chiffre d'affaires atteint {{revenue.2}} et les frais de personnel {{staff_cost.2}}.",
+      "Au troisième exercice, la boutique atteint environ 370 commandes par mois et les places de marché 140. Les prix augmentent de 2 %. Le chiffre d'affaires s'élève à {{revenue.3}} et le résultat net à {{net_result.3}}."
+    ],
+    "profitability": "La marge brute s'élève à {{gm_pct.1}} du chiffre d'affaires au premier exercice et à {{gm_pct.3}} au troisième. Elle est calculée après les achats de marchandises et après les services et biens divers, dont la publicité en ligne et la rémunération de la gérante. Le résultat d'exploitation est de {{operating_result.1}} au premier exercice et de {{operating_result.3}} au troisième. La trésorerie la plus basse s'élève à {{lowest_cash}} en {{lowest_cash_month}}.",
+    "risks": "- Ventes plus faibles que prévu : le budget de publicité est réduit et les commandes de stock sont adaptées.\n- Hausse des frais d'expédition : les frais de livraison facturés aux clients sont revus.\n- Dépendance aux places de marché : la part des ventes sur la boutique propre reste majoritaire."
+  },
+  "document": {
+    "date": "2027-01-15",
+    "place": "Namur"
+  }
+}

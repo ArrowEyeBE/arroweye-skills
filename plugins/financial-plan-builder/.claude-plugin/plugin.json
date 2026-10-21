@@ -1,0 +1,20 @@
+{
+  "name": "financial-plan-builder",
+  "version": "0.2.2",
+  "description": "Draws up the legal financial plan (art. 5:4 WVV / CSA) for founders incorporating a Belgian BV / SRL, in Dutch, French or English: interview, Excel calculation model and Word document for the notary, with an independent review. Not tax, legal or accounting advice.",
+  "author": {
+    "name": "ArrowEye Automations BV (Maxime Dedeyne)"
+  },
+  "keywords": [
+    "belgium",
+    "bv",
+    "srl",
+    "financial plan",
+    "financieel plan",
+    "plan financier",
+    "incorporation",
+    "notary",
+    "wvv"
+  ],
+  "license": "SEE LICENSE IN LICENSE"
+}

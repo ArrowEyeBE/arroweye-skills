@@ -1,0 +1,225 @@
+{
+  "_about": "Default values for Belgian legal, tax and payroll rules used by the model, each with its official source and the date it was last checked. Explanation: belgian-rules.md. Update procedure: skills/fp-rules-check/SKILL.md. A plan can override any value in plan-data.json (rules + rules_sources) without changing this file.",
+  "last_checked": "2026-10-15",
+  "review_after_days": 180,
+  "sources": {
+    "wvv": {
+      "name": {
+        "nl": "Justel: Wetboek van vennootschappen en verenigingen",
+        "fr": "Justel : Code des sociétés et des associations",
+        "en": "Justel: Belgian Code of Companies and Associations"
+      },
+      "url": "https://www.ejustice.just.fgov.be/eli/wet/2019/03/23/2019A40586/justel",
+      "look_for": "art. 5:4 (financial plan), art. 5:16 (founders' liability), art. 5:153 (alarm-bell procedure)"
+    },
+    "wib": {
+      "name": {
+        "nl": "FOD Financiën – Fisconetplus (WIB 92)",
+        "fr": "SPF Finances – Fisconetplus (CIR 92)",
+        "en": "FPS Finance – Fisconetplus (Income Tax Code 1992)"
+      },
+      "url": "https://www.fisconetplus.be/",
+      "look_for": "art. 215 WIB 92 / CIR 92 (corporate tax rates, reduced rate and its conditions), art. 218 (prepayments)"
+    },
+    "vat": {
+      "name": {
+        "nl": "FOD Financiën – btw",
+        "fr": "SPF Finances – TVA",
+        "en": "FPS Finance – VAT"
+      },
+      "url": "https://financien.belgium.be/nl/btw",
+      "look_for": "VAT rates (KB nr. 20), small-business exemption (art. 56bis BTW-Wetboek), filing frequency; legal text on Fisconetplus"
+    },
+    "rsz": {
+      "name": {
+        "nl": "RSZ – administratieve instructies: socialezekerheidsbijdragen",
+        "fr": "ONSS – instructions administratives : cotisations de sécurité sociale",
+        "en": "NSSO – administrative instructions: social security contributions"
+      },
+      "url": "https://www.socialsecurity.be/employer/instructions/dmfa/nl/latest/instructions/socialsecuritycontributions/contributions.html",
+      "look_for": "basic employer contribution, wage-moderation contribution, reductions for first hires"
+    },
+    "index": {
+      "name": {
+        "nl": "FOD WASO – automatische loonindexering",
+        "fr": "SPF ETCS – indexation automatique des salaires",
+        "en": "FPS Employment – automatic wage indexation"
+      },
+      "url": "https://werk.belgie.be/nl/themas/verloning/automatische-loonindexering",
+      "look_for": "indexation of the joint committee (paritair comité) that applies to the staff"
+    },
+    "rsvz_amount": {
+      "name": {
+        "nl": "RSVZ – hoeveel vennootschapsbijdrage",
+        "fr": "INASTI – montant de la cotisation des sociétés",
+        "en": "NISSE – amount of the company contribution"
+      },
+      "url": "https://www.rsvz.be/nl/faq/hoeveel-vennootschapsbijdrage-moet-ik-betalen",
+      "look_for": "the yearly amounts and the balance-sheet threshold"
+    },
+    "rsvz_exempt": {
+      "name": {
+        "nl": "RSVZ – vrijstelling vennootschapsbijdrage",
+        "fr": "INASTI – exonération de la cotisation des sociétés",
+        "en": "NISSE – exemption from the company contribution"
+      },
+      "url": "https://www.rsvz.be/nl/faq/kan-ik-vrijgesteld-worden-van-het-betalen-van-de-vennootschapsbijdrage",
+      "look_for": "conditions of the exemption for starting companies"
+    },
+    "self_employed": {
+      "name": {
+        "nl": "FOD Sociale Zekerheid – sociale bijdragen zelfstandigen (tabel van het jaar)",
+        "fr": "SPF Sécurité sociale – cotisations sociales des indépendants (tableau de l'année)",
+        "en": "FPS Social Security – social contributions of the self-employed (table of the year)"
+      },
+      "url": "https://socialsecurity.belgium.be/sites/default/files/content/docs/nl/sociaal-beleid-vorm-geven/zelfstandigen/bijdragennota_2026_tabel_nl.pdf",
+      "look_for": "§ 1 Zelfstandigen in hoofdberoep and § 3 bijberoep: rate, income brackets, minimum and provisional contribution per quarter (amounts exclude the fund's administration costs); a new table is published every year"
+    },
+    "nbb": {
+      "name": {
+        "nl": "Nationale Bank – modellen jaarrekening",
+        "fr": "Banque nationale – modèles de comptes annuels",
+        "en": "National Bank – annual-accounts models"
+      },
+      "url": "https://www.nbb.be/en/central-balance-sheet-office/preparation-and-filing/what-file/models/models-companies-standard-specific-consolidated",
+      "look_for": "micro / abridged model for companies with capital (structure and codes of the balance sheet and P&L)"
+    },
+    "practice": {
+      "name": {
+        "nl": "Vuistregel (geen wettelijke waarde)",
+        "fr": "Règle empirique (pas de valeur légale)",
+        "en": "Rule of thumb (not a legal value)"
+      },
+      "url": "",
+      "look_for": ""
+    }
+  },
+  "rules": {
+    "corporate_tax_standard": {
+      "value": 0.25,
+      "status": "stable",
+      "source": "wib",
+      "checked": "2026-10-15"
+    },
+    "corporate_tax_reduced": {
+      "value": 0.2,
+      "status": "stable",
+      "source": "wib",
+      "checked": "2026-10-15"
+    },
+    "corporate_tax_reduced_bracket": {
+      "value": 100000,
+      "status": "stable",
+      "source": "wib",
+      "checked": "2026-10-15"
+    },
+    "reduced_rate_min_director_pay": {
+      "value": 51000,
+      "status": "verify",
+      "source": "wib",
+      "checked": "2026-10-15",
+      "note": "Law of 15 July 2026 (Belgian Official Gazette 29/07/2026): €50,000, indexed yearly, from assessment year 2027 (€51,000 indexed for AY 2027, according to Attentia; official indexed amount to be confirmed). Only applies from the fifth taxable period after incorporation."
+    },
+    "reduced_rate_pay_condition_from_period": {
+      "value": 5,
+      "status": "stable",
+      "source": "wib",
+      "checked": "2026-10-15",
+      "note": "Art. 215, third paragraph, 4° WIB 92: the minimum-remuneration condition applies 'vanaf het vijfde belastbaar tijdperk vanaf hun oprichting'."
+    },
+    "employer_ssc_rate": {
+      "value": 0.27,
+      "status": "verify",
+      "source": "rsz",
+      "checked": "2026-10-15",
+      "note": "Estimate for white-collar staff incl. small sector contributions; blue-collar is higher. A payroll simulation is better."
+    },
+    "salary_months_per_year": {
+      "value": 13.92,
+      "status": "estimate",
+      "source": "practice",
+      "checked": "2026-10-15"
+    },
+    "wage_indexation": {
+      "value": 0.02,
+      "status": "estimate",
+      "source": "index",
+      "checked": "2026-10-15"
+    },
+    "depreciation_start_lag_months": {
+      "value": 0,
+      "status": "estimate",
+      "source": "practice",
+      "checked": "2026-10-15"
+    },
+    "cash_buffer_months": {
+      "value": 1,
+      "status": "estimate",
+      "source": "practice",
+      "checked": "2026-10-15"
+    }
+  },
+  "legal_items": {
+    "financial_plan": {
+      "status": "stable",
+      "source": "wvv",
+      "checked": "2026-10-15"
+    },
+    "alarm_bell": {
+      "status": "stable",
+      "source": "wvv",
+      "checked": "2026-10-15"
+    },
+    "vat_rates": {
+      "status": "stable",
+      "source": "vat",
+      "checked": "2026-10-15"
+    },
+    "vat_exemption": {
+      "status": "verify",
+      "source": "vat",
+      "checked": "2026-10-15",
+      "note": "Threshold 25,000; not supported by the model."
+    },
+    "company_contribution": {
+      "status": "verify",
+      "source": "rsvz_amount",
+      "checked": "2026-10-15",
+      "note": "Amounts for 2026: small = balance total up to 879,163.44, large = above. Reform to 4 levels pending.",
+      "amounts": {
+        "small": 409.3,
+        "large": 1022.38
+      }
+    },
+    "company_contribution_exemption": {
+      "status": "stable",
+      "source": "rsvz_exempt",
+      "checked": "2026-10-15",
+      "note": "Exempt during the first 3 years of the company's existence, counted from the year of incorporation, for all companies except NV, registered in the KBO, when the directors (and the majority of active non-director partners) were self-employed for no more than 12 quarters in the 40 quarters before incorporation (side activity and helper included).",
+      "years": 3,
+      "max_quarters": 12,
+      "window_quarters": 40
+    },
+    "nbb_schema": {
+      "status": "stable",
+      "source": "nbb",
+      "checked": "2026-10-15"
+    },
+    "self_employed_contributions": {
+      "status": "verify",
+      "source": "self_employed",
+      "checked": "2026-10-15",
+      "note": "2026 values for the self-employed in main occupation, without the social insurance fund's administration costs (about 3-4% depending on the fund). Contributions are calculated on the director's net taxable professional income; the minimum applies below the minimum income. Primostarters pay a reduced minimum during their first 4 quarters.",
+      "year": 2026,
+      "rate": 0.205,
+      "ceiling_first_bracket": 75024.54,
+      "min_income": 17374.08,
+      "min_quarterly": 890.42,
+      "min_quarterly_primostarter": 459.82,
+      "min_income_primostarter": 8972.07,
+      "side_activity_min_quarterly": 98.51,
+      "side_activity_threshold": 1922.16,
+      "admin_cost_typical": 0.0305
+    }
+  }
+}

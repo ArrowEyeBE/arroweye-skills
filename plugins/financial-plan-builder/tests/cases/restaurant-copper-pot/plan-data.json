@@ -1,0 +1,694 @@
+{
+  "meta": {
+    "language": "en",
+    "schema_version": "0.1",
+    "note": "Fictional test case: restaurant with lunch and dinner, 16-month first financial year, opening after a 2-month fit-out."
+  },
+  "company": {
+    "name": "The Copper Pot",
+    "legal_form": "BV",
+    "address": "Example Street 10, 2000 Antwerp",
+    "start_date": "2027-09-01",
+    "first_fy_end": "2028-12-31",
+    "fiscal_years": 3,
+    "vat_period_months": 3,
+    "business_types": [
+      "hospitality"
+    ],
+    "premises": "rented",
+    "food": true
+  },
+  "revenue_streams": [
+    {
+      "id": "lunch",
+      "name": "Lunch (food)",
+      "unit": "covers",
+      "price_excl_vat": 18,
+      "price_indexation": 0.03,
+      "vat_rate": 0.12,
+      "payment_lag_months": 0,
+      "goods_cost_pct": 0.3,
+      "other_var_cost_pct": 0.015,
+      "stock_cover_months": 0.25,
+      "supplier_lag_months": 1,
+      "purchase_vat_rate": 0.06,
+      "volumes": {
+        "2027-09": 0,
+        "2027-10": 0,
+        "2027-11": 340,
+        "2027-12": 420,
+        "2028-01": 313,
+        "2028-02": 375,
+        "2028-03": 442,
+        "2028-04": 468,
+        "2028-05": 518,
+        "2028-06": 544,
+        "2028-07": 517,
+        "2028-08": 272,
+        "2028-09": 544,
+        "2028-10": 544,
+        "2028-11": 544,
+        "2028-12": 626,
+        "2029-01": 476,
+        "2029-02": 536,
+        "2029-03": 595,
+        "2029-04": 595,
+        "2029-05": 625,
+        "2029-06": 625,
+        "2029-07": 565,
+        "2029-08": 298,
+        "2029-09": 595,
+        "2029-10": 595,
+        "2029-11": 595,
+        "2029-12": 684,
+        "2030-01": 517,
+        "2030-02": 581,
+        "2030-03": 646,
+        "2030-04": 646,
+        "2030-05": 678,
+        "2030-06": 678,
+        "2030-07": 614,
+        "2030-08": 323,
+        "2030-09": 646,
+        "2030-10": 646,
+        "2030-11": 646,
+        "2030-12": 743
+      }
+    },
+    {
+      "id": "dinner",
+      "name": "Dinner (food)",
+      "unit": "covers",
+      "price_excl_vat": 34,
+      "price_indexation": 0.03,
+      "vat_rate": 0.12,
+      "payment_lag_months": 0,
+      "goods_cost_pct": 0.3,
+      "other_var_cost_pct": 0.015,
+      "stock_cover_months": 0.25,
+      "supplier_lag_months": 1,
+      "purchase_vat_rate": 0.06,
+      "volumes": {
+        "2027-09": 0,
+        "2027-10": 0,
+        "2027-11": 550,
+        "2027-12": 683,
+        "2028-01": 510,
+        "2028-02": 614,
+        "2028-03": 726,
+        "2028-04": 770,
+        "2028-05": 855,
+        "2028-06": 901,
+        "2028-07": 857,
+        "2028-08": 462,
+        "2028-09": 924,
+        "2028-10": 924,
+        "2028-11": 924,
+        "2028-12": 1063,
+        "2029-01": 792,
+        "2029-02": 891,
+        "2029-03": 990,
+        "2029-04": 990,
+        "2029-05": 1040,
+        "2029-06": 1040,
+        "2029-07": 940,
+        "2029-08": 495,
+        "2029-09": 990,
+        "2029-10": 990,
+        "2029-11": 990,
+        "2029-12": 1138,
+        "2030-01": 845,
+        "2030-02": 950,
+        "2030-03": 1056,
+        "2030-04": 1056,
+        "2030-05": 1109,
+        "2030-06": 1109,
+        "2030-07": 1003,
+        "2030-08": 528,
+        "2030-09": 1056,
+        "2030-10": 1056,
+        "2030-11": 1056,
+        "2030-12": 1214
+      }
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "unit": "covers",
+      "price_excl_vat": 10,
+      "price_indexation": 0.03,
+      "vat_rate": 0.21,
+      "payment_lag_months": 0,
+      "goods_cost_pct": 0.27,
+      "other_var_cost_pct": 0.015,
+      "stock_cover_months": 0.5,
+      "supplier_lag_months": 1,
+      "purchase_vat_rate": 0.21,
+      "volumes": {
+        "2027-09": 0,
+        "2027-10": 0,
+        "2027-11": 890,
+        "2027-12": 1103,
+        "2028-01": 823,
+        "2028-02": 989,
+        "2028-03": 1168,
+        "2028-04": 1238,
+        "2028-05": 1373,
+        "2028-06": 1445,
+        "2028-07": 1374,
+        "2028-08": 734,
+        "2028-09": 1468,
+        "2028-10": 1468,
+        "2028-11": 1468,
+        "2028-12": 1689,
+        "2029-01": 1268,
+        "2029-02": 1427,
+        "2029-03": 1585,
+        "2029-04": 1585,
+        "2029-05": 1665,
+        "2029-06": 1665,
+        "2029-07": 1505,
+        "2029-08": 793,
+        "2029-09": 1585,
+        "2029-10": 1585,
+        "2029-11": 1585,
+        "2029-12": 1822,
+        "2030-01": 1362,
+        "2030-02": 1531,
+        "2030-03": 1702,
+        "2030-04": 1702,
+        "2030-05": 1787,
+        "2030-06": 1787,
+        "2030-07": 1617,
+        "2030-08": 851,
+        "2030-09": 1702,
+        "2030-10": 1702,
+        "2030-11": 1702,
+        "2030-12": 1957
+      }
+    }
+  ],
+  "cost_lines": [
+    {
+      "id": "director_a",
+      "name": "Director's remuneration (manager)",
+      "category": 618,
+      "amount": 2800,
+      "interval_months": 1,
+      "start": "2027-11",
+      "end": "2028-12",
+      "vat_rate": 0,
+      "indexation": 0
+    },
+    {
+      "id": "director_a2",
+      "name": "Director's remuneration (manager) from 2029",
+      "category": 618,
+      "amount": 4000,
+      "interval_months": 1,
+      "start": "2029-01",
+      "vat_rate": 0,
+      "indexation": 0.02
+    },
+    {
+      "id": "rent",
+      "name": "Rent of the restaurant",
+      "category": 61,
+      "amount": 3200,
+      "interval_months": 1,
+      "start": "2027-11",
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": "Lease agreement (rent-free during the fit-out)"
+    },
+    {
+      "id": "opening",
+      "name": "Opening campaign",
+      "category": 61,
+      "amount": 3000,
+      "interval_months": 0,
+      "start": "2027-10",
+      "vat_rate": 0.21
+    },
+    {
+      "id": "notary",
+      "name": "Notary and publication of the deed",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 0,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "kbo",
+      "name": "Registration in the Crossroads Bank (KBO/BCE)",
+      "category": 61,
+      "amount": 110,
+      "interval_months": 0,
+      "start": "2027-09",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accountant",
+      "name": "Accountant",
+      "category": 61,
+      "amount": 250,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accounting_software",
+      "name": "Invoicing and accounting software",
+      "category": 61,
+      "amount": 30,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "bank",
+      "name": "Bank fees",
+      "category": 65,
+      "amount": 15,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "liability_insurance",
+      "name": "Liability insurance",
+      "category": 61,
+      "amount": 500,
+      "interval_months": 12,
+      "start": "2027-09",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "telecom",
+      "name": "Phone and internet",
+      "category": 61,
+      "amount": 60,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "it_software",
+      "name": "IT, software and hosting",
+      "category": 61,
+      "amount": 50,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing and advertising",
+      "category": 61,
+      "amount": 200,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "nbb_filing",
+      "name": "Filing the annual accounts (NBB)",
+      "category": 61,
+      "amount": 80,
+      "interval_months": 12,
+      "start": "2029-07",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "category": 61,
+      "amount": 900,
+      "interval_months": 1,
+      "start": "2027-11",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "category": 61,
+      "amount": 150,
+      "interval_months": 1,
+      "start": "2027-11",
+      "vat_rate": 0.06,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "fire_insurance",
+      "name": "Fire insurance (contents and stock)",
+      "category": 61,
+      "amount": 600,
+      "interval_months": 12,
+      "start": "2027-09",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "cleaning",
+      "name": "Cleaning",
+      "category": 61,
+      "amount": 150,
+      "interval_months": 1,
+      "start": "2027-11",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "waste",
+      "name": "Waste collection",
+      "category": 61,
+      "amount": 60,
+      "interval_months": 1,
+      "start": "2027-11",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "maintenance",
+      "name": "Maintenance and repairs",
+      "category": 61,
+      "amount": 100,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accident_insurance",
+      "name": "Workplace accident insurance",
+      "category": 61,
+      "amount": 2100,
+      "interval_months": 12,
+      "start": "2027-10",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "social_secretariat",
+      "name": "Payroll service (social secretariat)",
+      "category": 61,
+      "amount": 280,
+      "interval_months": 1,
+      "start": "2027-10",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "prevention_service",
+      "name": "External prevention service (occupational health)",
+      "category": 61,
+      "amount": 700,
+      "interval_months": 12,
+      "start": "2027-10",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "payment_terminal",
+      "name": "Payment terminal",
+      "category": 61,
+      "amount": 30,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "pos",
+      "name": "Till system (POS)",
+      "category": 61,
+      "amount": 60,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "favv",
+      "name": "Food safety agency (FAVV/AFSCA) levy",
+      "category": 640,
+      "amount": 200,
+      "interval_months": 12,
+      "start": "2027-09",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "music_licence",
+      "name": "Music licence (Unisono)",
+      "category": 61,
+      "amount": 400,
+      "interval_months": 12,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "linen",
+      "name": "Linen and laundry",
+      "category": 61,
+      "amount": 150,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "small_equipment",
+      "name": "Replacement of small equipment and tableware",
+      "category": 61,
+      "amount": 100,
+      "interval_months": 1,
+      "start": "2027-09",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "company_contribution",
+      "name": "Annual company contribution",
+      "category": 640,
+      "amount": 0,
+      "interval_months": 12,
+      "start": "2027-09",
+      "vat_rate": 0,
+      "source": "Exempt during the first 3 years (confirmed by the social insurance fund)"
+    }
+  ],
+  "staff": [
+    {
+      "id": "chef",
+      "role": "Head chef",
+      "contract": "employee",
+      "start": "2027-10",
+      "fte": 1,
+      "gross_monthly": 3500
+    },
+    {
+      "id": "cook",
+      "role": "Cook",
+      "contract": "employee",
+      "start": "2027-11",
+      "fte": 1,
+      "gross_monthly": 2700
+    },
+    {
+      "id": "kitchen_help",
+      "role": "Kitchen assistant (part-time)",
+      "contract": "employee",
+      "start": "2027-11",
+      "fte": 0.5,
+      "gross_monthly": 2200
+    },
+    {
+      "id": "floor",
+      "role": "Waiter",
+      "contract": "employee",
+      "start": "2027-11",
+      "fte": 1,
+      "gross_monthly": 2500
+    },
+    {
+      "id": "flexi",
+      "role": "Flexi-job waiters (weekends)",
+      "contract": "flexi-job",
+      "start": "2027-11",
+      "fte": 0.4,
+      "employer_cost_monthly": 1500
+    },
+    {
+      "id": "floor2",
+      "role": "Waiter (part-time)",
+      "contract": "employee",
+      "start": "2028-03",
+      "fte": 0.5,
+      "gross_monthly": 2500
+    },
+    {
+      "id": "cook2",
+      "role": "Second cook",
+      "contract": "employee",
+      "start": "2029-03",
+      "fte": 1,
+      "gross_monthly": 2700
+    }
+  ],
+  "investments": [
+    {
+      "id": "fitout",
+      "name": "Fit-out of the dining room and bar",
+      "category": 22,
+      "amount": 85000,
+      "date": "2027-10",
+      "life_years": 10
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen equipment",
+      "category": 22,
+      "amount": 55000,
+      "date": "2027-10",
+      "life_years": 7
+    },
+    {
+      "id": "furniture",
+      "name": "Furniture and tableware",
+      "category": 22,
+      "amount": 18000,
+      "date": "2027-10",
+      "life_years": 5
+    },
+    {
+      "id": "gks",
+      "name": "Registered cash system and IT",
+      "category": 22,
+      "amount": 4500,
+      "date": "2027-10",
+      "life_years": 3
+    },
+    {
+      "id": "rent_deposit",
+      "name": "Rental deposit",
+      "category": 28,
+      "amount": 9600,
+      "date": "2027-09",
+      "life_years": 0,
+      "vat_rate": 0,
+      "source": "Lease agreement: 3 months' rent"
+    }
+  ],
+  "financing": {
+    "equity": [
+      {
+        "name": "Contribution founder A",
+        "amount": 30000,
+        "date": "2027-09"
+      },
+      {
+        "name": "Contribution founder B",
+        "amount": 60000,
+        "date": "2027-09"
+      }
+    ],
+    "loans": [
+      {
+        "lender": "Bank (investment loan)",
+        "type": "bank",
+        "amount": 150000,
+        "date": "2027-09",
+        "rate": 0.052,
+        "term_months": 96,
+        "grace_months": 6,
+        "guarantees": "Gigarant guarantee for 50% and a pledge on the business"
+      }
+    ],
+    "grants": [],
+    "confirmed_none": [
+      "grants",
+      "in_kind"
+    ]
+  },
+  "tax": {
+    "reduced_rate": false,
+    "prepayments": false,
+    "payment_lag_months": 9
+  },
+  "defaults_used": [
+    "lunch.stock_cover_months",
+    "dinner.stock_cover_months",
+    "drinks.stock_cover_months",
+    "notary",
+    "kbo",
+    "accountant",
+    "accounting_software",
+    "bank",
+    "liability_insurance",
+    "telecom",
+    "it_software",
+    "marketing",
+    "nbb_filing",
+    "fire_insurance",
+    "maintenance",
+    "accident_insurance",
+    "social_secretariat",
+    "prevention_service",
+    "payment_terminal",
+    "pos",
+    "favv",
+    "music_licence",
+    "linen",
+    "small_equipment"
+  ],
+  "founders": [
+    {
+      "name": "Founder A",
+      "role": "Director, restaurant manager",
+      "address": "Example Street 10, 2000 Antwerp",
+      "birth_year": 1987,
+      "side_activity": false
+    },
+    {
+      "name": "Founder B",
+      "role": "Director",
+      "address": "Sample Lane 4, 2018 Antwerp",
+      "birth_year": 1979,
+      "side_activity": true
+    }
+  ],
+  "activity": {
+    "purpose": "The object of the company is, in Belgium and abroad, the operation of restaurants, bars and catering businesses, the preparation and sale of meals and drinks for consumption on and off the premises, and all transactions directly or indirectly related to it.",
+    "offer": "The Copper Pot is a neighbourhood restaurant with 60 seats in the centre of Antwerp, serving seasonal Belgian cooking.\n\n- Lunch from Tuesday to Friday, with a set lunch menu.\n- Dinner from Tuesday to Saturday, à la carte.\n- Drinks: Belgian beers, a short wine list and soft drinks.",
+    "business_model": "Guests pay at the table, by card or in cash. A lunch costs on average {{stream.lunch.price}} excluding VAT and a dinner {{stream.dinner.price}}; guests spend on average another {{stream.drinks.price}} on drinks. Food is charged at 12% VAT, drinks at 21%.\n\nFood costs are about 30% of the food price, drinks about 27% of the drinks price. Suppliers are paid at 30 days.",
+    "market": "The restaurant is located in a busy street with offices and residents nearby. Lunch targets office workers, dinner targets residents and visitors. Several restaurants in the area serve international cuisine; few offer Belgian seasonal cooking at this price level.",
+    "outlook": "After the plan's horizon, the founders consider adding a small terrace and private dining for groups."
+  },
+  "assumptions": {
+    "years": [
+      "The first financial year runs for 16 months, from September 2027 to December 2028. The premises are fitted out in September and October 2027; the restaurant opens on 1 November 2027. It starts with about 20 guests per lunch and 25 per dinner, rising to about 32 and 42 in the second half of 2028, with 17 lunch days and 22 dinner days a month and a two-week closure in August. The head chef starts in October to prepare the opening; the cook, a part-time kitchen assistant, a waiter and flexi-job waiters start in November, and a part-time waiter joins in March 2028. Revenue amounts to {{revenue.1}}.",
+      "In the second financial year, the restaurant serves about 35 guests per lunch and 45 per dinner. A second cook is hired in March 2029 and the manager's remuneration increases. Prices rise by 3%. Revenue amounts to {{revenue.2}} and the operating result to {{operating_result.2}}.",
+      "In the third financial year, guest numbers grow to about 38 per lunch and 48 per dinner, and prices rise by another 3%. Revenue amounts to {{revenue.3}} and the net result to {{net_result.3}}."
+    ],
+    "profitability": "The gross margin is {{gm_pct.1}} of revenue in the first financial year and {{gm_pct.3}} in the third; it is measured after food and drinks purchases and after services and other goods, including rent and the manager's remuneration. Staff costs are the largest cost item: {{staff_cost.2}} in the second financial year. The operating result is {{operating_result.1}} in the first financial year, which includes the two months of fit-out without revenue, and {{operating_result.3}} in the third. The lowest cash position is {{lowest_cash}} in {{lowest_cash_month}}.",
+    "risks": "- Fewer guests than expected: the founders will close on Tuesdays and reduce the flexi-job hours.\n- Higher food and energy prices: the menu prices are reviewed every six months.\n- Delays in the fit-out: the opening campaign is postponed, and the bank loan's grace period covers the first six months."
+  },
+  "document": {
+    "date": "2027-08-20",
+    "place": "Antwerp"
+  }
+}

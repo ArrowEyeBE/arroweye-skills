@@ -1,0 +1,6 @@
+reference/
+.DS_Store
+tests/out/
+__pycache__/
+*.pyc
+~$*

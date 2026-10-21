@@ -1,0 +1,16 @@
+{
+  "name": "arroweye-skills",
+  "description": "Public skills and plugins by ArrowEye Automations: agent skills (SKILL.md) that work in Claude, Codex, Cursor, Copilot and other tools, plus Claude Code plugins.",
+  "owner": {
+    "name": "ArrowEye Automations BV (Maxime Dedeyne)"
+  },
+  "plugins": [
+    {
+      "name": "financial-plan-builder",
+      "description": "Legal financial plan (art. 5:4 WVV / CSA) for incorporating a Belgian BV / SRL, in Dutch, French or English: interview, Excel model and Word document for the notary, with an independent review.",
+      "source": "./plugins/financial-plan-builder",
+      "category": "finance",
+      "tags": ["belgium", "bv", "srl", "financial plan", "notary"]
+    }
+  ]
+}

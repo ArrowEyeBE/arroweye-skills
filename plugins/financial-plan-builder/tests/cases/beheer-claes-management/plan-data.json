@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "language": "nl",
+    "schema_version": "0.1"
+  },
+  "company": {
+    "name": "Claes Management BV",
+    "legal_form": "BV",
+    "address": "Voorbeeldstraat 12, 2800 Mechelen",
+    "start_date": "2026-12-01",
+    "first_fy_end": "2027-12-31",
+    "fiscal_years": 3,
+    "vat_period_months": 3,
+    "business_types": [
+      "management"
+    ],
+    "premises": "none",
+    "contribution_exempt": true
+  },
+  "founders": [
+    {
+      "name": "Lotte Claes",
+      "role": "bestuurder",
+      "address": "Voorbeeldstraat 12, 2800 Mechelen",
+      "birth_year": 1988,
+      "side_activity": false
+    }
+  ],
+  "activity": {
+    "purpose": "De vennootschap heeft tot voorwerp, in België en in het buitenland, voor eigen rekening of voor rekening van derden: het waarnemen van bestuursmandaten in andere vennootschappen en het verlenen van managementdiensten, advies en ondersteuning op het vlak van bedrijfsvoering, organisatie en financiën.\n\nZij mag alle verrichtingen stellen die rechtstreeks of onrechtstreeks bijdragen tot de verwezenlijking van haar voorwerp.",
+    "purpose_status": "ontwerp door de oprichter, af te stemmen met de notaris",
+    "offer": "Claes Management is de managementvennootschap van Lotte Claes. Via de vennootschap oefent zij haar bestuursmandaat uit bij Atelier Noord BV en levert zij daar managementdiensten op het vlak van bedrijfsvoering en financiën.\n\nDe vennootschap heeft geen personeel, geen voorraad en geen eigen bedrijfsruimte. In de cijfers van dit plan is Atelier Noord BV de enige klant; andere mandaten of opdrachten zijn mogelijk, maar niet in de cijfers opgenomen.",
+    "business_model": "De vennootschap factureert maandelijks een managementvergoeding op basis van een managementovereenkomst: {{stream.mgmt_fee.price}} per maand exclusief btw bij de start en {{stream.mgmt_fee.price.2}} per maand vanaf juli 2027, telkens vermeerderd met 21% btw. De vergoeding vervangt de bezoldiging die de oprichter vandaag rechtstreeks als bestuurder ontvangt en dekt haar bezoldiging, haar sociale bijdragen, de eigen kosten van de vennootschap en de opbouw van een reserve.\n\nDe facturen worden bij ontvangst betaald. De omzet bedraagt {{revenue.1}} in het eerste boekjaar, {{revenue.2}} in het tweede en {{revenue.3}} in het derde.",
+    "outlook": "Na de planperiode kan de vennootschap bijkomende bestuursmandaten of adviesopdrachten opnemen. Die zijn niet in de cijfers van dit plan opgenomen."
+  },
+  "revenue_streams": [
+    {
+      "id": "mgmt_fee",
+      "name": "Managementvergoeding Atelier Noord BV",
+      "unit": "maand",
+      "price_excl_vat": 4000,
+      "price_schedule": {
+        "2027-07": 4500
+      },
+      "vat_rate": 0.21,
+      "payment_lag_months": 0,
+      "payment_note": "verbonden klant die bij factuur betaalt (managementovereenkomst)",
+      "volumes": {
+        "2026-12": 1,
+        "2027-01": 1,
+        "2027-02": 1,
+        "2027-03": 1,
+        "2027-04": 1,
+        "2027-05": 1,
+        "2027-06": 1,
+        "2027-07": 1,
+        "2027-08": 1,
+        "2027-09": 1,
+        "2027-10": 1,
+        "2027-11": 1,
+        "2027-12": 1,
+        "2028-01": 1,
+        "2028-02": 1,
+        "2028-03": 1,
+        "2028-04": 1,
+        "2028-05": 1,
+        "2028-06": 1,
+        "2028-07": 1,
+        "2028-08": 1,
+        "2028-09": 1,
+        "2028-10": 1,
+        "2028-11": 1,
+        "2028-12": 1,
+        "2029-01": 1,
+        "2029-02": 1,
+        "2029-03": 1,
+        "2029-04": 1,
+        "2029-05": 1,
+        "2029-06": 1,
+        "2029-07": 1,
+        "2029-08": 1,
+        "2029-09": 1,
+        "2029-10": 1,
+        "2029-11": 1,
+        "2029-12": 1
+      }
+    }
+  ],
+  "cost_lines": [
+    {
+      "id": "dir_pay",
+      "name": "Bezoldiging bestuurder",
+      "category": 618,
+      "schedule": {
+        "2026-12": 1500,
+        "2027-01": 1500,
+        "2027-02": 1500,
+        "2027-03": 1500,
+        "2027-04": 1500,
+        "2027-05": 1500,
+        "2027-06": 1500,
+        "2027-07": 2200,
+        "2027-08": 2200,
+        "2027-09": 2200,
+        "2027-10": 2200,
+        "2027-11": 2200,
+        "2027-12": 2200,
+        "2028-01": 2200,
+        "2028-02": 2200,
+        "2028-03": 2200,
+        "2028-04": 2200,
+        "2028-05": 2200,
+        "2028-06": 2200,
+        "2028-07": 2200,
+        "2028-08": 2200,
+        "2028-09": 2200,
+        "2028-10": 2200,
+        "2028-11": 2200,
+        "2028-12": 2200,
+        "2029-01": 2200,
+        "2029-02": 2200,
+        "2029-03": 2200,
+        "2029-04": 2200,
+        "2029-05": 2200,
+        "2029-06": 2200,
+        "2029-07": 2200,
+        "2029-08": 2200,
+        "2029-09": 2200,
+        "2029-10": 2200,
+        "2029-11": 2200,
+        "2029-12": 2200
+      },
+      "vat_rate": 0,
+      "source": "eigenaar"
+    },
+    {
+      "id": "dir_social",
+      "name": "Sociale bijdragen zelfstandige bestuurder (betaald door de vennootschap)",
+      "category": 618,
+      "amount": 1135.5,
+      "interval_months": 3,
+      "start": "2026-12",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "dir_allowance",
+      "name": "Onkostenvergoeding bestuurder",
+      "category": 61,
+      "amount": 150,
+      "interval_months": 1,
+      "start": "2026-12",
+      "vat_rate": 0,
+      "source": "eigenaar"
+    },
+    {
+      "id": "notary",
+      "name": "Notaris en publicatie oprichtingsakte",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 0,
+      "start": "2026-12",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "kbo",
+      "name": "Inschrijving KBO (ondernemingsloket)",
+      "category": 61,
+      "amount": 110,
+      "interval_months": 0,
+      "start": "2026-12",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accountant",
+      "name": "Boekhouder",
+      "category": 61,
+      "amount": 225,
+      "interval_months": 1,
+      "start": "2026-12",
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": "offerte boekhouder"
+    },
+    {
+      "id": "accounting_software",
+      "name": "Facturatiesoftware",
+      "category": 61,
+      "amount": 20,
+      "interval_months": 1,
+      "start": "2026-12",
+      "vat_rate": 0.21,
+      "source": "eigenaar"
+    },
+    {
+      "id": "telecom",
+      "name": "Telefoon en internet",
+      "category": 61,
+      "amount": 50,
+      "interval_months": 1,
+      "start": "2026-12",
+      "vat_rate": 0.21,
+      "source": "eigenaar"
+    },
+    {
+      "id": "bank",
+      "name": "Bankkosten",
+      "category": 65,
+      "amount": 15,
+      "interval_months": 1,
+      "start": "2026-12",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "nbb_filing",
+      "name": "Neerlegging jaarrekening (NBB)",
+      "category": 61,
+      "amount": 80,
+      "interval_months": 12,
+      "start": "2028-07",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "company_contribution",
+      "name": "Vennootschapsbijdrage",
+      "category": 640,
+      "amount": 409.3,
+      "interval_months": 12,
+      "start": "2029-01",
+      "vat_rate": 0,
+      "source": "belgian-rules.json (vrijstelling 2026–2028)"
+    }
+  ],
+  "staff": [],
+  "investments": [],
+  "financing": {
+    "equity": [
+      {
+        "name": "Inbreng in geld Lotte Claes",
+        "amount": 3000,
+        "date": "2026-12"
+      }
+    ],
+    "loans": [],
+    "grants": [],
+    "confirmed_none": [
+      "loans",
+      "grants",
+      "in_kind"
+    ],
+    "unavailable_equity": 0,
+    "dividends": [
+      {
+        "fy": 1,
+        "amount": 4000,
+        "date": "2028-06"
+      },
+      {
+        "fy": 2,
+        "amount": 6000,
+        "date": "2029-06"
+      }
+    ]
+  },
+  "tax": {
+    "reduced_rate": true,
+    "prepayments": false
+  },
+  "assumptions": {
+    "years": [
+      "Het eerste boekjaar loopt van december 2026 tot eind 2027 en telt dertien maanden. De vergoeding bedraagt {{stream.mgmt_fee.price}} per maand tot en met juni 2027 en {{stream.mgmt_fee.price.2}} vanaf juli, samen {{revenue.1}}. Vanaf juli stijgt ook de bezoldiging van de bestuurder. In de startmaand worden de oprichtingskosten betaald. Het boekjaar sluit met een nettoresultaat van {{net_result.1}} en een kaspositie van {{cash_end.1}}.",
+      "De vergoeding blijft het hele jaar {{stream.mgmt_fee.price.2}} per maand, goed voor {{revenue.2}}. De kosten blijven stabiel, op de indexering van het ereloon van de boekhouder na. In juni 2028 wordt een dividend uit het resultaat van het eerste boekjaar uitgekeerd. Het nettoresultaat bedraagt {{net_result.2}}; de kaspositie op het einde van het jaar is {{cash_end.2}}.",
+      "Het derde boekjaar verloopt zoals het tweede: omzet {{revenue.3}} en een nettoresultaat van {{net_result.3}}. In juni 2029 volgt een dividend uit het resultaat van het tweede boekjaar. Het eigen vermogen bedraagt op het einde van het plan {{equity.3}}."
+    ],
+    "profitability": "De vennootschap heeft geen aankopen, geen personeel en geen investeringen. Haar kosten zijn vast: vooral de bezoldiging en de sociale bijdragen van de bestuurder, daarnaast de boekhouder, software, telefoon en bankkosten. De vergoeding dekt die kosten vanaf de eerste maand. De bedrijfswinst bedraagt {{op_pct.2}} van de omzet in het tweede boekjaar.",
+    "risks": "- **Eén klant.** Alle omzet komt van Atelier Noord BV. Valt de vergoeding lager uit of later, dan verlaagt of verschuift de bestuurder haar eigen bezoldiging, de grootste kost van de vennootschap, en wordt het dividend uitgesteld.\n- **Sociale bijdragen.** De bijdragen zijn voorlopig berekend; bij de regularisatie op het werkelijke inkomen kunnen ze hoger uitvallen. De reserve van de vennootschap vangt dat op."
+  },
+  "document": {
+    "date": "2026-11-15",
+    "place": "Mechelen"
+  },
+  "defaults_used": [
+    "dir_social",
+    "notary",
+    "kbo",
+    "bank",
+    "nbb_filing"
+  ],
+  "open_items": []
+}

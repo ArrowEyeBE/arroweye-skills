@@ -1,0 +1,675 @@
+{
+  "meta": {
+    "language": "nl",
+    "schema_version": "0.1",
+    "note": "Fictional test case: artisan bakery with shop and B2B deliveries."
+  },
+  "company": {
+    "name": "Bakkerij De Korst",
+    "legal_form": "BV",
+    "address": "Voorbeeldstraat 1, 9000 Gent",
+    "start_date": "2027-01-04",
+    "first_fy_end": "2027-12-31",
+    "fiscal_years": 3,
+    "vat_period_months": 3,
+    "business_types": [
+      "production",
+      "trade"
+    ],
+    "premises": "rented",
+    "food": true
+  },
+  "revenue_streams": [
+    {
+      "id": "winkel",
+      "name": "Winkelverkoop brood en patisserie",
+      "unit": "klanten",
+      "price_excl_vat": 8.5,
+      "price_indexation": 0.03,
+      "vat_rate": 0.06,
+      "payment_lag_months": 0,
+      "goods_cost_pct": 0.3,
+      "other_var_cost_pct": 0.012,
+      "other_var_vat_rate": 0.21,
+      "stock_cover_months": 0.25,
+      "supplier_lag_months": 1,
+      "purchase_vat_rate": 0.06,
+      "volumes": {
+        "2027-01": 2080,
+        "2027-02": 2340,
+        "2027-03": 2600,
+        "2027-04": 2860,
+        "2027-05": 3120,
+        "2027-06": 3250,
+        "2027-07": 2990,
+        "2027-08": 2860,
+        "2027-09": 3380,
+        "2027-10": 3640,
+        "2027-11": 3770,
+        "2027-12": 4290,
+        "2028-01": 3900,
+        "2028-02": 3900,
+        "2028-03": 4030,
+        "2028-04": 4160,
+        "2028-05": 4290,
+        "2028-06": 4290,
+        "2028-07": 3640,
+        "2028-08": 3510,
+        "2028-09": 4290,
+        "2028-10": 4420,
+        "2028-11": 4420,
+        "2028-12": 5070,
+        "2029-01": 4108,
+        "2029-02": 4108,
+        "2029-03": 4238,
+        "2029-04": 4368,
+        "2029-05": 4498,
+        "2029-06": 4498,
+        "2029-07": 3822,
+        "2029-08": 3692,
+        "2029-09": 4498,
+        "2029-10": 4628,
+        "2029-11": 4628,
+        "2029-12": 5330
+      }
+    },
+    {
+      "id": "b2b",
+      "name": "Leveringen aan horeca en bedrijven",
+      "unit": "leveringen",
+      "price_excl_vat": 85,
+      "price_indexation": 0.03,
+      "vat_rate": 0.06,
+      "payment_lag_months": 1,
+      "goods_cost_pct": 0.32,
+      "stock_cover_months": 0.25,
+      "supplier_lag_months": 1,
+      "purchase_vat_rate": 0.06,
+      "volumes": {
+        "2027-01": 0,
+        "2027-02": 0,
+        "2027-03": 0,
+        "2027-04": 0,
+        "2027-05": 0,
+        "2027-06": 15,
+        "2027-07": 20,
+        "2027-08": 25,
+        "2027-09": 30,
+        "2027-10": 30,
+        "2027-11": 35,
+        "2027-12": 40,
+        "2028-01": 45,
+        "2028-02": 46,
+        "2028-03": 48,
+        "2028-04": 49,
+        "2028-05": 50,
+        "2028-06": 52,
+        "2028-07": 45,
+        "2028-08": 45,
+        "2028-09": 55,
+        "2028-10": 57,
+        "2028-11": 58,
+        "2028-12": 60,
+        "2029-01": 60,
+        "2029-02": 61,
+        "2029-03": 62,
+        "2029-04": 63,
+        "2029-05": 64,
+        "2029-06": 65,
+        "2029-07": 55,
+        "2029-08": 55,
+        "2029-09": 66,
+        "2029-10": 67,
+        "2029-11": 68,
+        "2029-12": 70
+      }
+    }
+  ],
+  "cost_lines": [
+    {
+      "id": "director_y1",
+      "name": "Bezoldiging bedrijfsleider",
+      "category": 618,
+      "amount": 2500,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": "2027-12",
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "director",
+      "name": "Bezoldiging bedrijfsleider vanaf jaar 2",
+      "category": 618,
+      "amount": 4200,
+      "interval_months": 1,
+      "start": "2028-01",
+      "end": null,
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "rent",
+      "name": "Huur winkel en atelier",
+      "category": 61,
+      "amount": 2200,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": "Huurovereenkomst"
+    },
+    {
+      "id": "energy",
+      "name": "Energie (ovens, koeling)",
+      "category": 61,
+      "amount": 1400,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "category": 61,
+      "amount": 120,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.06,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "accountant",
+      "name": "Boekhouder",
+      "category": 61,
+      "amount": 450,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "pos",
+      "name": "Kassasysteem (abonnement)",
+      "category": 61,
+      "amount": 95,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "terminal",
+      "name": "Betaalterminal",
+      "category": 61,
+      "amount": 30,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "telecom",
+      "name": "Telefoon en internet",
+      "category": 61,
+      "amount": 80,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "category": 61,
+      "amount": 300,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "packaging",
+      "name": "Verpakking",
+      "category": 61,
+      "amount": 350,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "cleaning",
+      "name": "Schoonmaak",
+      "category": 61,
+      "amount": 250,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "waste",
+      "name": "Afvalophaling",
+      "category": 61,
+      "amount": 90,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "insurance",
+      "name": "Verzekeringen (brand, BA, productaansprakelijkheid)",
+      "category": 61,
+      "amount": 1800,
+      "interval_months": 12,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "favv",
+      "name": "Bijdrage FAVV",
+      "category": 640,
+      "amount": 250,
+      "interval_months": 12,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "company_contribution",
+      "name": "Vennootschapsbijdrage",
+      "category": 640,
+      "amount": 350,
+      "interval_months": 12,
+      "start": "2027-06",
+      "end": null,
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "notary",
+      "name": "Notaris oprichting",
+      "category": 61,
+      "amount": 1600,
+      "interval_months": 0,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0.21,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "kbo",
+      "name": "Inschrijving KBO",
+      "category": 61,
+      "amount": 109,
+      "interval_months": 0,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "bank",
+      "name": "Bankkosten",
+      "category": 65,
+      "amount": 20,
+      "interval_months": 1,
+      "start": "2027-01",
+      "end": null,
+      "vat_rate": 0,
+      "indexation": 0.02,
+      "source": ""
+    },
+    {
+      "id": "accounting_software",
+      "name": "Facturatie- en boekhoudsoftware",
+      "category": 61,
+      "amount": 30,
+      "interval_months": 1,
+      "start": "2027-01",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "it_software",
+      "name": "IT, software en hosting",
+      "category": 61,
+      "amount": 50,
+      "interval_months": 1,
+      "start": "2027-01",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "nbb_filing",
+      "name": "Neerlegging jaarrekening (NBB)",
+      "category": 61,
+      "amount": 80,
+      "interval_months": 12,
+      "start": "2028-07",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "maintenance",
+      "name": "Onderhoud en herstellingen",
+      "category": 61,
+      "amount": 100,
+      "interval_months": 1,
+      "start": "2027-01",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "accident_insurance",
+      "name": "Arbeidsongevallenverzekering",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 12,
+      "start": "2027-01",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "social_secretariat",
+      "name": "Sociaal secretariaat",
+      "category": 61,
+      "amount": 160,
+      "interval_months": 1,
+      "start": "2027-01",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "prevention_service",
+      "name": "Externe preventiedienst (arbeidsgeneeskunde)",
+      "category": 61,
+      "amount": 400,
+      "interval_months": 12,
+      "start": "2027-01",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "vehicle_fuel",
+      "name": "Brandstof of laden voertuig",
+      "category": 61,
+      "amount": 250,
+      "interval_months": 1,
+      "start": "2027-05",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "vehicle_insurance",
+      "name": "Verzekering voertuig",
+      "category": 61,
+      "amount": 1200,
+      "interval_months": 12,
+      "start": "2027-05",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "vehicle_tax",
+      "name": "Verkeersbelasting",
+      "category": 640,
+      "amount": 250,
+      "interval_months": 12,
+      "start": "2027-05",
+      "vat_rate": 0,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "vehicle_maintenance",
+      "name": "Onderhoud voertuig",
+      "category": 61,
+      "amount": 80,
+      "interval_months": 1,
+      "start": "2027-05",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "machine_maintenance",
+      "name": "Onderhoud machines",
+      "category": 61,
+      "amount": 150,
+      "interval_months": 1,
+      "start": "2027-01",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    },
+    {
+      "id": "auditor_in_kind",
+      "name": "Bedrijfsrevisor (verslag inbreng in natura)",
+      "category": 61,
+      "amount": 2000,
+      "interval_months": 0,
+      "start": "2027-01",
+      "vat_rate": 0.21,
+      "source": "default (cost-defaults 2026-10-15)"
+    }
+  ],
+  "staff": [
+    {
+      "id": "sales1",
+      "role": "Verkoopster",
+      "contract": "bediende",
+      "start": "2027-01",
+      "fte": 0.8,
+      "gross_monthly": 2400
+    },
+    {
+      "id": "baker",
+      "role": "Bakker (gezel)",
+      "contract": "arbeider",
+      "start": "2027-03",
+      "fte": 1,
+      "gross_monthly": 2900
+    },
+    {
+      "id": "student",
+      "role": "Jobstudent weekend",
+      "contract": "student",
+      "start": "2027-01",
+      "employer_cost_monthly": 600,
+      "fte": 0.2
+    },
+    {
+      "id": "sales2",
+      "role": "Verkoopster (deeltijds)",
+      "contract": "bediende",
+      "start": "2028-03",
+      "fte": 0.5,
+      "gross_monthly": 2400
+    }
+  ],
+  "investments": [
+    {
+      "id": "oven",
+      "name": "Ovens en bakkerijmateriaal",
+      "category": 22,
+      "amount": 68000,
+      "date": "2027-01",
+      "life_years": 7
+    },
+    {
+      "id": "fitout",
+      "name": "Inrichting winkel",
+      "category": 22,
+      "amount": 32000,
+      "date": "2027-01",
+      "life_years": 10
+    },
+    {
+      "id": "van",
+      "name": "Bestelwagen",
+      "category": 22,
+      "amount": 28000,
+      "date": "2027-05",
+      "life_years": 5
+    },
+    {
+      "id": "pos_hw",
+      "name": "Kassa en hardware",
+      "category": 22,
+      "amount": 2500,
+      "date": "2027-01",
+      "life_years": 3
+    },
+    {
+      "id": "deposit",
+      "name": "Huurwaarborg (3 maanden)",
+      "category": 28,
+      "amount": 6600,
+      "date": "2027-01",
+      "life_years": 0,
+      "vat_rate": 0
+    },
+    {
+      "id": "mixer",
+      "name": "Kneedmachine",
+      "category": 22,
+      "amount": 4000,
+      "date": "2027-01",
+      "life_years": 5,
+      "vat_rate": 0,
+      "in_kind": true
+    }
+  ],
+  "financing": {
+    "equity": [
+      {
+        "name": "Inbreng oprichter A",
+        "amount": 20000,
+        "date": "2027-01"
+      },
+      {
+        "name": "Inbreng oprichter B",
+        "amount": 15000,
+        "date": "2027-01"
+      }
+    ],
+    "loans": [
+      {
+        "lender": "Bank (investeringskrediet)",
+        "type": "bank",
+        "amount": 130000,
+        "date": "2027-01",
+        "rate": 0.049,
+        "term_months": 84,
+        "grace_months": 6,
+        "guarantees": "Waarborg Gigarant 50% + pand op handelszaak"
+      }
+    ],
+    "grants": [
+      {
+        "name": "Startpremie gemeente",
+        "amount": 2500,
+        "date": "2027-03"
+      }
+    ]
+  },
+  "tax": {
+    "reduced_rate": true,
+    "prepayments": false,
+    "payment_lag_months": 9
+  },
+  "rules": {},
+  "defaults_used": [
+    "rules.employer_ssc_rate",
+    "winkel.stock_cover_months",
+    "b2b.stock_cover_months",
+    "energy",
+    "packaging",
+    "accounting_software",
+    "it_software",
+    "nbb_filing",
+    "maintenance",
+    "accident_insurance",
+    "social_secretariat",
+    "prevention_service",
+    "vehicle_fuel",
+    "vehicle_insurance",
+    "vehicle_tax",
+    "vehicle_maintenance",
+    "machine_maintenance",
+    "auditor_in_kind"
+  ],
+  "expect_status": {
+    "ck_balance": "ok",
+    "ck_cash": "ok",
+    "ck_reduced": "ok",
+    "ck_equity": "ok"
+  },
+  "founders": [
+    {
+      "name": "Oprichter A",
+      "role": "Bestuurder, bakker",
+      "address": "Voorbeeldstraat 1, 9000 Gent",
+      "birth_year": 1990,
+      "side_activity": false
+    },
+    {
+      "name": "Oprichter B",
+      "role": "Bestuurder, verkoop en administratie",
+      "address": "Voorbeeldlaan 2, 9000 Gent",
+      "birth_year": 1992,
+      "side_activity": true
+    }
+  ],
+  "activity": {
+    "purpose": "De vennootschap heeft tot doel, in België en in het buitenland: het bereiden en verkopen van brood, banket, patisserie en aanverwante voedingswaren, zowel in een eigen winkel als via levering aan horeca en bedrijven, en alle handelingen die daarmee rechtstreeks of onrechtstreeks verband houden.",
+    "offer": "Bakkerij De Korst bakt dagelijks ambachtelijk brood op zuurdesem, viennoiserie en patisserie in een eigen atelier achter de winkel.\n\n- Winkel: brood, koffiekoeken en taarten, zes dagen per week open.\n- Leveringen: dagverse broden en koffiekoeken voor cafés, restaurants en bedrijfskantines in de regio.",
+    "business_model": "De bakkerij verdient geld op twee manieren. In de winkel betalen klanten aan de kassa; de gemiddelde aankoop bedraagt {{stream.winkel.price}} exclusief btw. Horeca- en bedrijfsklanten bestellen vaste leveringen met een gemiddelde waarde van {{stream.b2b.price}} per levering en betalen op 30 dagen.\n\nDe grondstoffen (bloem, boter, eieren, zuivel) kosten ongeveer 30% van de winkelprijs en 32% van de leverprijs.",
+    "market": "De winkel ligt in een woonwijk met veel gezinnen en weinig ambachtelijke bakkers binnen wandelafstand. Voor de leveringen mikken de oprichters op een tiental vaste horecaklanten binnen een straal van 10 km."
+  },
+  "assumptions": {
+    "years": [
+      "In het eerste boekjaar groeit het aantal winkelklanten van ongeveer 80 naar 165 per dag (26 openingsdagen per maand), met een dip in de zomer. De leveringen starten in juni. De omzet bedraagt {{revenue.1}}; door de opstartkosten en afschrijvingen is het resultaat na belastingen {{net_result.1}}.",
+      "In het tweede jaar draait de winkel op kruissnelheid en groeien de leveringen tot ongeveer 55 per maand. Vanaf maart komt een tweede verkoopster deeltijds in dienst. De omzet stijgt tot {{revenue.2}}, het bedrijfsresultaat tot {{operating_result.2}}.",
+      "Het derde jaar toont een beperkte groei door prijsindexering (3%) en meer leveringen. De omzet bedraagt {{revenue.3}} en het resultaat na belastingen {{net_result.3}}."
+    ],
+    "profitability": "De brutomarge bedraagt {{gm_pct.1}} van de omzet in het eerste jaar en {{gm_pct.3}} in het derde jaar. Het bedrijfsresultaat is positief vanaf het eerste boekjaar ({{op_pct.1}} van de omzet) en stijgt tot {{op_pct.3}} in het derde jaar. De laagste kaspositie bedraagt {{lowest_cash}} in {{lowest_cash_month}}.",
+    "risks": "- Minder winkelklanten dan verwacht: de openingsuren kunnen worden beperkt en de jobstudent wordt minder ingezet.\n- Stijgende grondstof- en energieprijzen: de verkoopprijzen worden jaarlijks herbekeken.\n- Trage betalers bij leveringen: nieuwe klanten betalen de eerste maand vooraf."
+  },
+  "document": {
+    "date": "2026-12-01",
+    "place": "Gent"
+  }
+}
