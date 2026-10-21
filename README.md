@@ -18,7 +18,7 @@ Two kinds of content live here:
 Install in Claude Code (once for the marketplace, then per plugin):
 
 ```
-/plugin marketplace add arroweye-automations/arroweye-skills
+/plugin marketplace add ArrowEyeBE/arroweye-skills
 /plugin install financial-plan-builder@arroweye-skills
 ```
 

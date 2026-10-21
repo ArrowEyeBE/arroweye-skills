@@ -33,7 +33,7 @@ The plugin checks these at the start and tells you what is missing. It never ins
 This plugin is published in the public `arroweye-skills` repository of ArrowEye Automations. Add that marketplace once, then install:
 
 ```
-/plugin marketplace add arroweye-automations/arroweye-skills
+/plugin marketplace add ArrowEyeBE/arroweye-skills
 /plugin install financial-plan-builder@arroweye-skills
 ```
 
